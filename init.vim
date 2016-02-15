@@ -1,12 +1,22 @@
+" set leader key to ','
+let mapleader=","
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'benekastah/neomake'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'croaker/mustang-vim'
-Plug 'ternjs/tern_for_vim'
 Plug 'mxw/vim-jsx'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py'} " --tern-completer' }  | Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'othree/yajs.vim'
+Plug 'othree/es.next.syntax.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'helino/vim-json'
+Plug 'digitaltoad/vim-jade'
 
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 call plug#end()
 
@@ -18,9 +28,6 @@ colorscheme mustang
 
 " Set syntax highlighting on
 syntax on
-
-" set leader key to ','
-let mapleader=","
  
 " Turn on the ruler to give row and column info
 set ruler
@@ -32,7 +39,6 @@ set nu
 set nobackup
 set nowritebackup
 set noswapfile
-
 
 " Map control+j cntr+k etc to moving around in the vim windows
 map <C-j> <C-w>j
@@ -74,3 +80,14 @@ let g:tern_show_signature_in_pum =1
 
 noremap <Leader>td :TernDoc
 noremap <Leader>tt :TernType
+noremap <Leader>tr :TernRename
+
+" Use ag if installed (brew install the_silver_searcher)
+if executable('ag')
+    " Note we extract the column as well as the file and line number
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
+
+map <Leader>fj !python -m json.tool<CR>
