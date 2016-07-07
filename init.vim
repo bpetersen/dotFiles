@@ -15,6 +15,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'helino/vim-json'
 Plug 'digitaltoad/vim-jade'
+Plug 'digitaltoad/vim-pug'
+Plug 'facebook/vim-flow'
 
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
