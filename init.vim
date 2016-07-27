@@ -7,16 +7,21 @@ Plug 'benekastah/neomake'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'croaker/mustang-vim'
 Plug 'mxw/vim-jsx'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'othree/yajs.vim'
-Plug 'othree/es.next.syntax.vim'
+" Plug 'othree/yajs.vim'
+" Plug 'othree/es.next.syntax.vim'
+" Plug 'carlitux/deoplete-ternjs'
+Plug 'pangloss/vim-javascript'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'helino/vim-json'
-Plug 'digitaltoad/vim-jade'
 Plug 'digitaltoad/vim-pug'
 Plug 'facebook/vim-flow'
+
+" but don't let vim-flow do any omnifunc completion
+"let g:flow#omnifunc = 0
+let g:tern_request_timeout = 10
 
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
@@ -62,8 +67,9 @@ filetype plugin indent on
 
 " Don't warn me when switching buffers that haven't been saved
 set hidden
+
 " don't require .jsx extension for jsx files
-let g:jx_ext_required = 0
+let g:jsx_ext_required = 0
 
 " you complete me debugging
 let g:ycm_server_use_vim_stdout = 1
