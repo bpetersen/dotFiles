@@ -1,6 +1,6 @@
 #!/bin/bash
-ln -s ~/Repos/dotfiles/init.vim ~/.config/nvim/init.vim
-ln -s ~/Repos/dotfiles/bash_profile ~/.bash_profile
-ln -s ~/Repos/dotfiles/tern-project ~/.tern-project
-ln -s ~/Repos/dotFiles/eslintrc ~/.eslintrc
-ln -s ~/Repos/dotFiles/tmux.conf ~/.tmux.conf
+ln -s ~/Repos/dot-files/init.vim ~/.config/nvim/init.vim
+ln -s ~/Repos/dot-files/bash_profile ~/.bash_profile
+ln -s ~/Repos/dot-files/tern-project ~/.tern-project
+ln -s ~/Repos/dot-files/eslintrc ~/.eslintrc
+ln -s ~/Repos/dot-files/tmux.conf ~/.tmux.conf
