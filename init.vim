@@ -9,8 +9,8 @@ Plug 'croaker/mustang-vim'
 Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" Plug 'othree/yajs.vim'
-" Plug 'othree/es.next.syntax.vim'
+Plug 'othree/yajs.vim'
+Plug 'othree/es.next.syntax.vim'
 " Plug 'carlitux/deoplete-ternjs'
 Plug 'pangloss/vim-javascript'
 Plug 'ctrlpvim/ctrlp.vim'
