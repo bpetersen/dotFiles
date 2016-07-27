@@ -3,7 +3,8 @@
   "libs": [
     "browser",
     "jquery",
-    "chai"
+    "chai",
+    "ramda"
   ],
   "plugins": {
     "complete_strings": {},
@@ -17,5 +18,6 @@
     "doc_comment": {
       "fullDocs": true
     }
-  }
+  },
+  dontLoad: ['node_modules/ramda/dist/ramda.js']
 }
