@@ -58,6 +58,9 @@ map <C-l> <C-w>l
 " Set nerdtree toggling
 map <C-n> :NERDTreeToggle<CR>
 
+" Close the current buffer without closing the pane
+map <C-c> :bp\|bd #<CR>
+
 " set indenting
 set expandtab
 set shiftwidth=2
