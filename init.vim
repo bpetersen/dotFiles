@@ -18,9 +18,19 @@ Plug 'rking/ag.vim'
 Plug 'helino/vim-json'
 Plug 'digitaltoad/vim-pug'
 Plug 'facebook/vim-flow'
+Plug 'lambdatoast/elm.vim'
+Plug 'mileszs/ack.vim'
+
+" use the silver searcher instead of ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " but don't let vim-flow do any omnifunc completion
 "let g:flow#omnifunc = 0
+" I had the timeout set really high to accommodate ramda, but the UX is not
+" great.  Still haven't figured out how to precompile tern's autocomplete file
+" so that it can parse faster.
 let g:tern_request_timeout = 10
 
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
@@ -102,3 +112,15 @@ if executable('ag')
 endif
 
 map <Leader>fj !python -m json.tool<CR>
+
+"folding settings
+" fold between braces -
+" `za` - toggles
+" `zc` - closes
+" `zo` - opens
+" `zR` - open all
+" `zM` - close all
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
