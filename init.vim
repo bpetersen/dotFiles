@@ -15,7 +15,7 @@ Plug 'othree/es.next.syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
-Plug 'helino/vim-json'
+Plug 'elzr/vim-json'
 Plug 'digitaltoad/vim-pug'
 Plug 'facebook/vim-flow'
 Plug 'lambdatoast/elm.vim'
@@ -62,7 +62,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 " this is actually a map for <C-h> but in most terminals control + h actually
 " sends backspace 
-map <BS> <C-w>h
+map <C-h> <C-w>h
 map <C-l> <C-w>l
 
 " Set nerdtree toggling
