@@ -3,8 +3,6 @@ if [ $? != 0 ]
 then
   cd ~/Repos/$1
   tmux new-session -s dev -n editor -d
-  #tmux send-keys -t dev 'cd ~/Repos/'$1 C-m
-  tmux send-keys -t dev 'nvim' C-m
   tmux split-window -h -p 40 -t dev
   tmux split-window -v -p 40 -t dev
   tmux new-window -n console -t dev
