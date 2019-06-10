@@ -15,6 +15,9 @@ mkdir ~/.nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install node
+npm install -g eslint
+npm install -g eslint-plugin-react
+npm install -g prettier
 
 # Vim - Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -22,6 +25,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 mkdir -p ~/.config
 mkdir -p ~/.config/nvim
+mkdir -p ~/.config/prettier
 
 ./symlink-dot-files.sh
 

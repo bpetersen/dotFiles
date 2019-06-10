@@ -1,0 +1,7 @@
+semi: false
+singleQuote: true
+trailingComma: es5
+overrides:
+  - files: "*specs.js"
+    options:
+      printWidth: 120
