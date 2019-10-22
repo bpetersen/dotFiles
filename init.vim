@@ -9,7 +9,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'sbdchd/neoformat'
 Plug 'junegunn/fzf'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neo4j-contrib/cypher-vim-syntax'
 
 call plug#end()
 
@@ -97,3 +98,10 @@ let g:neoformat_javascript_prettier = {
   \ 'args': ['--stdin', '--stdin-filepath', '"%:p"', '--config ~/.config/prettier/config.yml'],
   \ 'stdin': 1,
   \ }
+
+"Neoclide/coc configuration
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
