@@ -7,6 +7,7 @@ brew install git bash-completion
 brew install bash-git-prompt
 brew install the_silver_searcher
 brew install python
+brew install reattach-to-user-namespace
 
 pip3 install pynvim
 
