@@ -38,12 +38,24 @@ export NVM_DIR="$HOME/.nvm"
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-
-export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PIPENV_VENV_IN_PROJECT=enabled
 export EDITOR=nvim
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:/Users/bdig/.linkerd2/bin
 
 alias vim='nvim'
 alias rundev='~/repos/dotFiles/scripts/dev.sh'
+alias kc='kubectl'
+alias kn='kubens'
+alias kcon='kubectx'
+alias nnvim='~/nvim-osx64/bin/nvim'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+. ~/.asdf/plugins/java/set-java-home.bash
+
