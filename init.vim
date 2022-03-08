@@ -11,6 +11,12 @@ Plug 'sbdchd/neoformat'
 Plug 'junegunn/fzf'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neo4j-contrib/cypher-vim-syntax'
+Plug 'mileszs/ack.vim'
+Plug 'mustache/vim-mustache-handlebars'
+
+":CocInstall coc-json
+":CocInstall coc-python
+":CocInstall coc-go
 
 call plug#end()
 
