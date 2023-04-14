@@ -1,3 +1,5 @@
+cask "iterm2"
+
 brew "zsh"
 brew "neovim"
 brew "tmux"

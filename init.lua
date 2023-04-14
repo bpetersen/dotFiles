@@ -322,7 +322,7 @@ require('toggleterm').setup({
 
 vim.g.update = 300
 vim.opt.signcolumn = 'yes'
-vim.cmd('source coc.vim')
+vim.cmd('source ~/Repos/dotFiles/coc.vim')
 
 vim.g.coc_global_extensions = {
 	'coc-css',
