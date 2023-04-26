@@ -59,7 +59,37 @@ npm install -g neovim
 # ***************************
 
 # install oh-my-zsh
-# install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "Close your terminal and reopen."
+pull_or_clone() {
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  CYAN='\033[0;36m'
+  NC='\033[0m'
+
+  target_folder=$1
+  repo_url=$2
+
+  if [ -d "$target_folder" ]; then
+    printf "${CYAN}Repository folder exists. Pulling changes...\n${NC}"
+    git -C "$target_folder" pull
+  else
+    printf "${CYAN}Repository folder does not exist. Cloning repository...\n${NC}"
+    git clone --depth=1 "$repo_url" "$target_folder"
+  fi
+}
+
+PLUGINS=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins
+THEMES=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes
+
+# Zsh Plugins
+pull_or_clone $PLUGINS/zsh-syntax-highlighting "https://github.com/zsh-users/zsh-syntax-highlighting.git" 
+pull_or_clone $PLUGINS/zsh-autosuggestions "https://github.com/zsh-users/zsh-autosuggestions.git" 
+pull_or_clone $PLUGINS/zsh-completions "https://github.com/zsh-users/zsh-completions.git" 
+
+# ZSH Themes
+pull_or_clone $THEMES/powerlevel10k "https://github.com/romkatv/powerlevel10k.git"
+
+printf "${CYAN}Don't forget to install a nerd font! (https://github.com/romkatv/powerlevel10k/blob/master/font.md)\n${NC}"
+
+printf "${GREEN}Close your terminal and reopen.\n${NC}"

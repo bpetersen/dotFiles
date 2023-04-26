@@ -1,5 +1,4 @@
 cask "iterm2"
-
 brew "zsh"
 brew "neovim"
 brew "tmux"
@@ -15,3 +14,4 @@ brew "zsh-completions"
 brew "zsh-autosuggestions"
 brew "ripgrep"
 brew "fd"
+brew "jq"
