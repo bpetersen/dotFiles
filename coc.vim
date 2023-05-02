@@ -32,3 +32,6 @@ function! CheckBackspace() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
