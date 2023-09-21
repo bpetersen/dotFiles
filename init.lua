@@ -108,6 +108,8 @@ lazy.setup({
   {'akinsho/bufferline.nvim'},
   {'lukas-reineke/indent-blankline.nvim'},
   {'croaker/mustang-vim'},
+  {'towolf/vim-helm'},
+  {'fatih/vim-go'},
 
   -- File explorer
   {'nvim-tree/nvim-tree.lua'},
