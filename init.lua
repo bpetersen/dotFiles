@@ -106,7 +106,7 @@ lazy.setup({
   {'lunarvim/darkplus.nvim'},
   {'nvim-lualine/lualine.nvim'},
   {'akinsho/bufferline.nvim'},
-  {'lukas-reineke/indent-blankline.nvim'},
+  {'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
   {'croaker/mustang-vim'},
   {'towolf/vim-helm'},
   {'fatih/vim-go'},
@@ -139,6 +139,7 @@ lazy.setup({
   {'nvim-lua/plenary.nvim'},
   {'editorconfig/editorconfig-vim'},
   {'akinsho/toggleterm.nvim'},
+	{'ntpeters/vim-better-whitespace'},
 })
 
 
@@ -244,13 +245,7 @@ require('Comment').setup({})
 -- Indent-blankline
 ---
 -- See :help indent-blankline-setup
-require('indent_blankline').setup({
-  char = '▏',
-  show_trailing_blankline_indent = false,
-  show_first_indent_level = false,
-  use_treesitter = true,
-  show_current_context = false
-})
+require('ibl').setup()
 
 
 ---
